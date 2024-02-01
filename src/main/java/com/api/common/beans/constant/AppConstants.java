@@ -25,6 +25,7 @@ public class AppConstants {
 	
 	
 	public static final String FORMAT_DD_MM_YYYY = "dd-MM-yyyy";
+	public static final String TIMEZONE = "Asia/Jakarta";
 	
 	public static final String ALREADY_EXIST = "Maaf, Data Sudah ada didalam database";
 	public static final String DATA_NOT_FOUND = "Maaf, Data Tidak Ditemukan"; 

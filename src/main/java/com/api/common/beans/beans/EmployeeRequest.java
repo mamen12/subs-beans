@@ -2,6 +2,8 @@ package com.api.common.beans.beans;
 
 import java.util.Date;
 
+import com.api.common.beans.constant.AppConstants;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -15,6 +17,7 @@ public class EmployeeRequest {
 	@JsonProperty(value = "nama_employee")
 	private String nama;
 	
+	@JsonFormat(shape = JsonFormat.Shape.STRING , pattern =  AppConstants.FORMAT_DD_MM_YYYY , timezone = AppConstants.TIMEZONE)
 	@JsonProperty(value = "tanggal_lahir")
 	private Date tglLahir;
 
@@ -27,6 +30,8 @@ public class EmployeeRequest {
 	@JsonProperty(value = "saldo_id")
 	private Long saldoId;
 
+	private String tglLahirWeb;
+	
 	public Long getId() {
 		return id;
 	}
@@ -74,5 +79,14 @@ public class EmployeeRequest {
 	public void setSaldoId(Long saldoId) {
 		this.saldoId = saldoId;
 	}
+
+	public String getTglLahirWeb() {
+		return tglLahirWeb;
+	}
+
+	public void setTglLahirWeb(String tglLahirWeb) {
+		this.tglLahirWeb = tglLahirWeb;
+	}
+	
 	
 }
